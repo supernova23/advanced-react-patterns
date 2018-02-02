@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced React patterns</title>
+</head>
+<body>
+    <div class="main">
+        <ul id="modules"></ul>
+    </div>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+      const list = document.querySelector('#modules');
+      const modules = [
+        "01-intro-to-react-toggled",
+        "02-compound-components",
+        "03-flexible-compound-components",
+        "04-make-higher-order-components",
+        "05-handling-prop-namespace-clashes-with-higher-order-components",
+        "06-improve-display-name-with-higher-order-components",
+        "07-handle-refs-with-higher-order-components",
+        "08-improve-unit-testability-of-higher-order-components",
+        "09-handle-statics-properly-with-higher-order-components",
+        "10-use-render-props",
+        "11-use-prop-collections",
+        "12-use-prop-getters",
+        "13-use-state-initializers",
+        "14-use-control-props",
+        "15-implement-a-provider-with-render-props",
+        "16-implement-a-higher-order-component-with-render-props",
+        "17-rerender-descendants-through-shouldcomponentupdate",
+        "18-use-redux-with-render-props",
+      ];
+
+      modules.forEach((module) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        li.appendChild(a);
+        list.appendChild(li);
+        a.href = `${module}/index.html`;
+        a.textContent = module
+      })
+    </script>
+</body>
+</html>
